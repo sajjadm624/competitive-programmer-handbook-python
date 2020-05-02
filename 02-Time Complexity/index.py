@@ -13,20 +13,20 @@ arr = [-1, 2, 4, -3, 5, 2, -5, 2]
 
 # O(n^3) solution
 best = 0
-for i in arr:
-	for j in arr:
-		sum = 0
-		for k in arr:
-			sum += k
-		best = max(best, sum)
+for i in range(len(arr)):
+    for j in range(i, len(arr)):
+        sum = 0
+        for k in range(i, j):
+        	sum += arr[k]
+        best = max(best, sum)
 print best
 
 # O(n^2) solution
 best = 0
-for i in arr:
+for i in range(len(arr)):
 	sum = 0
-	for j in arr:
-		sum += j
+	for j in range(i, len(arr)):
+		sum += arr[j]
 		best = max(best, sum)
 print best
 
