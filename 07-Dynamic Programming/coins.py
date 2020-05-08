@@ -3,7 +3,7 @@ import math
 coins = [1,3,4]
 
 #recursive solution to minimum number of coins problem
-def r_solve(x):
+def c_solve(x):
 	if x < 0: return math.inf
 	elif x == 0: return 0
 	best = math.inf
